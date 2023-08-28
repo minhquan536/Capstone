@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+header {
+  box-shadow: 0 2px 4px #e2ebfc;
+}
+header .navbar-brand {
+  color: #435334;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+header .navbar-collapse a {
+  color: #9EB384;
+  font-size: 20px;
+  font-weight: 400;
+  transition: all 0.5s;
+}
+header .navbar-collapse a:hover {
+  color: #435334;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.carousel {
+  background-color: #CEDEBD;
+}
+.carousel .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  background-image: url(../../img/image\ 4.png);
+  background-position: center;
+  background-size: cover;
+  height: 450px;
+}
+.carousel .container .text {
+  color: #435334;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+  padding-bottom: 50px;
+}/*# sourceMappingURL=main.css.map */

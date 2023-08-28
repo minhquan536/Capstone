@@ -1,0 +1,24 @@
+.carousel{
+    background-color: $color-white-1;
+    
+    .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+        align-items: center;
+
+        background-image: url(../../img/image\ 4.png);
+        background-position: center;
+        background-size: cover;
+        height: 450px;
+
+        .img{
+            
+        }
+        .text{
+            @include headerStyle($color-white-3,$fs-7,$fw-1);
+            text-align: center;
+            padding-bottom: 50px;
+            
+        }
+    }
+}
