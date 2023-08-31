@@ -9,9 +9,8 @@
     font-weight: $fw;
 }
 
-@mixin button($pd-y,$pd-x,$color,$radius){
+@mixin button($pd-y,$pd-x,$radius){
     padding: $pd-y $pd-x;
     border: none;
-    background: $color;
     border-radius: $radius;
 }

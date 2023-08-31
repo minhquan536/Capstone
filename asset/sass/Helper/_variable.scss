@@ -4,10 +4,10 @@
 
 
 //color
-$color-white-0: #FAF1E4;
-$color-white-1: #CEDEBD;
-$color-white-2: #9EB384;
-$color-white-3: #435334;
+$color-white-0: #FDE5EC;
+$color-white-1: #FCBAAD;
+$color-white-2: #E48586;
+$color-white-3: #916DB3;
 
 
 //dark color
@@ -40,8 +40,8 @@ $ls-2: 0.03rem;
 
 //Padding
 $pd-1: 25px;
-$pd-2: 225px;
-$pd-3: 13px;
+$pd-2: 15px;
+$pd-3: 20px;
 $pd-4: 44px;
 $pd-5: 100px;
 $pd-6: 8px;
@@ -65,3 +65,11 @@ $breakpoints: (
     "medium": 768px,
     "small": 576px
 );
+
+//boder-radius
+$radius-1: 5px;
+$radius-1: 10px;
+$radius-1: 15px;
+$radius-1: 20px;
+$radius-1: 25px;
+$radius-1: 30px;

@@ -1,3 +1,6 @@
-// .carousel .text{
-//     // @include button()
-// }
+.carousel .text button{
+    @include button($pd-2,$pd-7,$radius-1);
+    background: linear-gradient(90deg, $color-white-3 0%, $color-white-2 100%);
+
+    
+}

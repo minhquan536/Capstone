@@ -1,17 +1,20 @@
 header{
-    box-shadow: 0 2px 4px #e2ebfc;
+    box-shadow: 0 2px 4px #916db38e;
 
     .navbar-brand{
-        @include headerStyle($color-white-3,$fs-3,$fw-3);
+        @include headerStyle($color-dark-2,$fs-3,$fw-3);
     }
 
     .navbar-collapse{
+        .navbar-nav{
+            gap: 30px;
+        }
         a{
-            @include headerStyle($color-white-2,$fs-7,$fw-1);
+            @include headerStyle($color-dark-2,$fs-7,$fw-1);
             transition: all 0.5s;
-
             &:hover{
-                @include headerStyle($color-white-3,$fs-7,$fw-1);
+                @include headerStyle($color-white-2,$fs-7,$fw-1);
+                
             }
         }
         

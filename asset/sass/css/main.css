@@ -6,45 +6,58 @@
 
 html,
 body {
-  font-family: "Nunito Sans", sans-serif;
+  font-family: "Nunito", sans-serif;
+}
+
+.carousel .text button {
+  padding: 15px 60px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(90deg, #916DB3 0%, #E48586 100%);
 }
 
 header {
-  box-shadow: 0 2px 4px #e2ebfc;
+  box-shadow: 0 2px 4px rgba(145, 109, 179, 0.5568627451);
 }
 header .navbar-brand {
-  color: #435334;
+  color: #121212;
   font-size: 1.8rem;
   font-weight: 700;
 }
+header .navbar-collapse .navbar-nav {
+  gap: 30px;
+}
 header .navbar-collapse a {
-  color: #9EB384;
+  color: #121212;
   font-size: 20px;
   font-weight: 400;
   transition: all 0.5s;
 }
 header .navbar-collapse a:hover {
-  color: #435334;
+  color: #E48586;
   font-size: 20px;
   font-weight: 400;
 }
 
 .carousel {
-  background-color: #CEDEBD;
+  padding-top: 50px;
 }
 .carousel .container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  background-image: url(../../img/image\ 4.png);
-  background-position: center;
+  background-image: url(../../img/crs.png);
+  background-position: center 30%;
   background-size: cover;
-  height: 450px;
 }
 .carousel .container .text {
-  color: #435334;
+  color: #212121;
   font-size: 20px;
-  font-weight: 400;
-  text-align: center;
-  padding-bottom: 50px;
+  font-weight: 700;
+  text-align: left;
+  margin: 100px;
+}
+.carousel .container .text h1 {
+  font-size: 70px;
+  font-weight: bold;
 }/*# sourceMappingURL=main.css.map */
