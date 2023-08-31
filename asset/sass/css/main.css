@@ -7,17 +7,38 @@
 html,
 body {
   font-family: "Nunito", sans-serif;
+  position: relative;
 }
 
 .carousel .text button {
   padding: 15px 60px;
   border: none;
-  border-radius: 30px;
+  border-radius: 5px;
   background: linear-gradient(90deg, #916DB3 0%, #E48586 100%);
+  font-size: 20px;
+  font-weight: 700;
+  transition: all 1s;
+}
+.carousel .text button:hover {
+  background: #916DB3;
+}
+
+.modal-footer .close {
+  padding: 15px 25px;
+  border: none;
+  border-radius: 5px;
+  background: gray;
+}
+.modal-footer .pay {
+  padding: 15px 60px;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #916DB3 0%, #E48586 100%);
+  font-size: 20px;
 }
 
 header {
-  box-shadow: 0 2px 4px rgba(145, 109, 179, 0.5568627451);
+  box-shadow: 0 2px 4px rgba(145, 109, 179, 0.2862745098);
 }
 header .navbar-brand {
   color: #121212;
@@ -59,5 +80,43 @@ header .navbar-collapse a:hover {
 }
 .carousel .container .text h1 {
   font-size: 70px;
+  font-weight: bolder;
+}
+
+.basket {
+  position: fixed;
+  right: 2%;
+  bottom: 4%;
+}
+.basket button {
+  border: none;
+  padding: 12px 12px;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #916DB3 0%, #E48586 100%);
+}
+.basket button i {
+  color: #121212;
+  font-size: 25px;
+}
+
+.modal-dialog {
+  max-width: 1000px;
+}
+.modal-dialog .modal-title {
+  color: #212121;
+  font-size: 20px;
+  font-weight: 700;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.project__title {
+  color: #212121;
+  font-size: 20px;
+  font-weight: 700;
+}
+.project__title h2 {
+  font-size: 40px;
   font-weight: bold;
 }/*# sourceMappingURL=main.css.map */

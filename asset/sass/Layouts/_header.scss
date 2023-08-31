@@ -1,6 +1,5 @@
 header{
-    box-shadow: 0 2px 4px #916db38e;
-
+    box-shadow: 0 2px 4px #916db349;
     .navbar-brand{
         @include headerStyle($color-dark-2,$fs-3,$fw-3);
     }

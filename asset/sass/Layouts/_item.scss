@@ -1,0 +1,7 @@
+.project__title{
+    @include headerStyle($color-dark-4,$fs-7,$fw-3);
+    h2{
+        font-size: 40px;
+        font-weight: bold;
+    }
+}
