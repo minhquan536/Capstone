@@ -5,3 +5,37 @@
         font-weight: bold;
     }
 }
+.card{
+    // height: 450px;
+    min-height: 490px;
+    img{
+        padding: 20px;
+    }
+    .card-body{
+        display: grid;
+        grid-template-columns: 60% 40%;
+        gap: 20px;
+        align-items: center;
+        padding: 20px;
+        h4{
+            text-align: end;
+        }
+        button{
+            @include button($pd-8,$pd-8,$radius-1);
+            background: linear-gradient(90deg, $color-white-3 0%, $color-white-2 100%);
+            font-size: 15px;
+            width: 80%;
+            font-weight: 400;
+            &:hover{
+                background: $color-white-3;
+            }
+        }
+        .card_name{
+            font-weight: bold;
+            font-size: $fs-2;
+        }
+        .card_price{
+            font-weight: bold;
+        }
+    }
+}

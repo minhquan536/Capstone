@@ -121,6 +121,42 @@ header .navbar-collapse a:hover {
   font-weight: bold;
 }
 
+.card {
+  min-height: 490px;
+}
+.card img {
+  padding: 20px;
+}
+.card .card-body {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  gap: 20px;
+  align-items: center;
+  padding: 20px;
+}
+.card .card-body h4 {
+  text-align: end;
+}
+.card .card-body button {
+  padding: 5px 5px;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #916DB3 0%, #E48586 100%);
+  font-size: 15px;
+  width: 80%;
+  font-weight: 400;
+}
+.card .card-body button:hover {
+  background: #916DB3;
+}
+.card .card-body .card_name {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+.card .card-body .card_price {
+  font-weight: bold;
+}
+
 .bg__dk {
   background: rgba(0, 0, 0, 0.4) url(../../img/ccc.jpg);
   background-position: center;
