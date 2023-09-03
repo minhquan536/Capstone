@@ -121,70 +121,109 @@ header .navbar-collapse a:hover {
   font-weight: bold;
 }
 
-.bg__dk {
-  background: rgba(0, 0, 0, 0.4) url(../../img/ccc.jpg);
-  background-position: center;
-  background-size: cover;
-  background-blend-mode: darken;
-  width: 100%;
-  height: 756px;
+body {
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(#02073d, #e66465);
 }
-.bg__dk .form {
+
+.form-control {
+  height: 50px;
+}
+
+.login__small {
+  display: flex;
   position: absolute;
-  top: 15%;
+  top: 50%;
   left: 50%;
-  transform: translate(-50%);
-  background-color: rgb(255, 255, 255);
-  border-radius: 15px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  transform: translate(-50%, -50%);
+  border: 1px solid white;
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  width: 70%;
 }
-.bg__dk .form .img {
-  min-width: 300px;
+
+.login__text {
+  width: 50%;
+  padding: 20px 20px 50px 20px;
 }
-.bg__dk .form .img img {
+
+.login__img {
+  width: 50%;
+}
+
+.login__img img {
   width: 100%;
-  border-radius: 15px 0 0 15px;
+  padding: 0 0 0 20px;
+  display: block;
+  border-radius: 20px;
 }
-.bg__dk .form .text {
-  padding: 20px;
-  line-height: 1.5;
+
+.lable__tk,
+.lable__mk,
+.text-muted {
+  color: white;
+  font-size: 30px;
+}
+
+.form-control {
+  font-size: 25px;
+}
+
+.login__btn {
+  color: white;
+  background-color: #e66465;
+  margin-top: 20px;
+  font-size: 30px;
+  border-radius: 20px;
+  padding: 10px 30px;
+  border: 1px solid #e66465;
   text-align: center;
-  width: 100%;
+  align-items: center;
 }
-.bg__dk .form .text input {
-  width: 90%;
-  padding: 10px;
-  border: none;
-  border-bottom: 1px solid black;
-}
-.bg__dk .form .text .form__dieuhuong button {
+
+.btn__home {
+  background-color: #02073d;
+  border: 1px solid #02073d;
+  color: white;
+  font-size: 30px;
+  border-radius: 20px;
   margin-top: 20px;
-  width: 80%;
-  padding: 15px 60px;
-  border: none;
-  border-radius: 5px;
-  background: linear-gradient(90deg, #916DB3 0%, #E48586 100%);
-  font-size: 20px;
+  padding: 10px 30px;
 }
-.bg__dk .form .text .form__dieuhuong button:hover {
-  background: #916DB3;
+
+.btn__home:hover {
+  border: 1px solid #02073d;
+  background-color: #02073d;
+}
+
+.btn__home a {
+  text-align: center;
+  align-items: center;
   color: white;
 }
-.bg__dk .form .text button {
-  margin-top: 20px;
-  width: 80%;
-  padding: 15px 60px;
-  border: none;
-  border-radius: 5px;
-  background: linear-gradient(90deg, #916DB3 0%, #E48586 100%);
-  font-size: 20px;
+
+.login__btn:hover {
+  background-color: #e66465;
+  border: 1px solid #e66465;
 }
-.bg__dk .form .text button:hover {
-  background: #916DB3;
+
+.btn {
+  display: flex;
+  justify-content: space-between;
+}
+
+.log {
+  padding-top: 20px;
+  font-size: 30px;
   color: white;
 }
-.bg__dk .form .text button a {
-  color: #121212;
+
+.login__text a {
+  display: block;
   text-decoration: none;
+}
+
+.log:hover {
+  color: rgb(3, 3, 75);
 }/*# sourceMappingURL=main.css.map */
