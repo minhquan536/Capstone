@@ -122,7 +122,13 @@ header .navbar-collapse a:hover {
 }
 
 .card {
-  min-height: 490px;
+  min-height: 500px;
+}
+.card .form_over {
+  min-height: 500px;
+  max-height: 500px;
+  background-color: rgba(255, 255, 255, 0.556);
+  border: none;
 }
 .card img {
   padding: 20px;
@@ -150,11 +156,54 @@ header .navbar-collapse a:hover {
   background: #916DB3;
 }
 .card .card-body .card_name {
-  font-weight: bold;
+  font-weight: 400;
   font-size: 1.1rem;
+  color: #121212;
+  text-decoration: none;
 }
 .card .card-body .card_price {
   font-weight: bold;
+  color: #121212;
+}
+.card .card-body .card__hang {
+  color: #9EB384;
+}
+
+.hidenasp:hover {
+  text-decoration: none;
+}
+
+.popup-chitietsp .form__popupsp {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  align-items: center;
+  gap: 50px;
+  padding: 50px 0;
+}
+.popup-chitietsp .form__popupsp .img__sp img {
+  width: 100%;
+}
+.popup-chitietsp .form__popupsp .thongtin__sp {
+  max-width: 80%;
+  line-height: 2;
+}
+.popup-chitietsp .form__popupsp .thongtin__sp .verd15 {
+  padding: 5px;
+  border-radius: 5px;
+}
+.popup-chitietsp .form__popupsp .thongtin__sp .chitetsp__bt__updown {
+  padding: 5px 5px;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #916DB3 0%, #E48586 100%);
+}
+.popup-chitietsp .form__popupsp .thongtin__sp .chitetsp__bt {
+  margin-top: 20px;
+  padding: 12px 60px;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #916DB3 0%, #E48586 100%);
+  font-size: 20px;
 }
 
 .bg__dk {

@@ -114,7 +114,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    
+
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="Illustrations" role="tabpanel" aria-labelledby="profile-tab">
@@ -210,7 +210,7 @@
         </div>
 
     </section> -->
-
+    <!-- <a href="./view/dangki.html"></a> -->
     <section class="basket">
         <button type="button" class="" data-toggle="modal" data-target="#exampleModal">
             <i class="fa-regular fa-clipboard"></i>
@@ -238,7 +238,7 @@
                                 </tr>
                             </thead>
                             <tbody id="tbodySanPham">
-        
+
                             </tbody>
                         </table>
                     </div>
@@ -251,6 +251,41 @@
         </div>
     </section>
 
+
+
+    <section class="popup-chitietsp">
+        <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable">
+                <div id="popup-ctsp" class="modal-content">
+                    <!-- <div class="container">
+                        <div class="form__popupsp">
+                            <div class="img__sp">
+                                <img src="./asset/img/image 5.png" alt="">
+                            </div>
+                            <div class="thongtin__sp">
+                                <h1>aaaa</h1>
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore distinctio aperiam
+                                    corporis a ipsum voluptatibus harum assumenda quibusdam tenetur ab? Commodi iste
+                                    molestiae nam iure, sit voluptas alias ad illum!</p>
+                                <h3>SIZE</h3>
+                                <div>form size</div>
+                                <h3>$ 250</h3>
+                                <span class=verd13>
+                                    <button class="chitetsp__bt__updown" onclick="HmFunction()"><b>-</b></button>
+                                </span>
+                                <input type="number" id="HNumber" class="verd15" value="0">
+                                <span class=verd13>
+                                    <button class="chitetsp__bt__updown" onclick="HaFunction()"><b>+</b></button>
+                                </span>
+                                <button class="chitetsp__bt">add to cart</button>
+                            </div>
+                        </div>
+
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </section>
     <footer>
     </footer>
 
@@ -271,7 +306,15 @@
 
     <script src="./controller/main.js"></script>
 
-    
+    <script>
+        function HaFunction() {
+            document.getElementById("HNumber").stepUp();
+        }
+
+        function HmFunction() {
+            document.getElementById("HNumber").stepDown();
+        }
+    </script>
 </body>
 
 </html>
