@@ -1,0 +1,32 @@
+.popup-chitietsp{
+    .form__popupsp{
+        .img__sp{
+            img{
+                width: 100%;
+            }
+        }
+        display: grid;
+        grid-template-columns: 50% 50%;
+        align-items: center;
+        gap: 50px;
+        padding: 50px 0;
+        .thongtin__sp{
+            max-width: 80%;
+            line-height: 2;
+            .verd15{
+                padding: 5px;
+                border-radius: 5px
+            }
+            .chitetsp__bt__updown{
+                @include button($pd-8,$pd-8,$radius-1);
+                background: linear-gradient(90deg, $color-white-3 0%, $color-white-2 100%);
+            }
+            .chitetsp__bt{
+                margin-top: 20px;
+                @include button($pd-6,$pd-7,$radius-1);
+                background: linear-gradient(90deg, $color-white-3 0%, $color-white-2 100%);
+                font-size: 20px;
+            }
+        }
+    }
+}
