@@ -19,6 +19,7 @@ body {
   font-weight: 700;
   transition: all 1s;
 }
+
 .carousel .text button:hover {
   background: #916DB3;
 }
@@ -29,6 +30,7 @@ body {
   border-radius: 5px;
   background: gray;
 }
+
 .modal-footer .pay {
   padding: 15px 60px;
   border: none;
@@ -40,20 +42,24 @@ body {
 header {
   box-shadow: 0 2px 4px rgba(145, 109, 179, 0.2862745098);
 }
+
 header .navbar-brand {
   color: #121212;
   font-size: 1.8rem;
   font-weight: 700;
 }
+
 header .navbar-collapse .navbar-nav {
   gap: 30px;
 }
+
 header .navbar-collapse a {
   color: #121212;
   font-size: 20px;
   font-weight: 400;
   transition: all 0.5s;
 }
+
 header .navbar-collapse a:hover {
   color: #E48586;
   font-size: 20px;
@@ -63,6 +69,7 @@ header .navbar-collapse a:hover {
 .carousel {
   padding-top: 50px;
 }
+
 .carousel .container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -71,6 +78,7 @@ header .navbar-collapse a:hover {
   background-position: center 30%;
   background-size: cover;
 }
+
 .carousel .container .text {
   color: #212121;
   font-size: 20px;
@@ -78,6 +86,7 @@ header .navbar-collapse a:hover {
   text-align: left;
   margin: 100px;
 }
+
 .carousel .container .text h1 {
   font-size: 70px;
   font-weight: bolder;
@@ -88,6 +97,7 @@ header .navbar-collapse a:hover {
   right: 2%;
   bottom: 4%;
 }
+
 .basket button {
   border: none;
   padding: 12px 12px;
@@ -95,6 +105,7 @@ header .navbar-collapse a:hover {
   border-radius: 5px;
   background: linear-gradient(90deg, #916DB3 0%, #E48586 100%);
 }
+
 .basket button i {
   color: #121212;
   font-size: 25px;
@@ -103,6 +114,7 @@ header .navbar-collapse a:hover {
 .modal-dialog {
   max-width: 1000px;
 }
+
 .modal-dialog .modal-title {
   color: #212121;
   font-size: 20px;
@@ -116,13 +128,116 @@ header .navbar-collapse a:hover {
   font-size: 20px;
   font-weight: 700;
 }
+
 .project__title h2 {
   font-size: 40px;
   font-weight: bold;
 }
 
-.sign {
-  background: linear-gradient(#e66465, #02073d);
+.card {
+  min-height: 500px;
+}
+
+.card .form_over {
+  min-height: 500px;
+  max-height: 500px;
+  background-color: rgba(255, 255, 255, 0.556);
+  border: none;
+}
+
+.card img {
+  padding: 20px;
+}
+
+.card .card-body {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  gap: 20px;
+  align-items: center;
+  padding: 20px;
+}
+
+.card .card-body h4 {
+  text-align: end;
+}
+
+.card .card-body button {
+  padding: 5px 5px;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #916DB3 0%, #E48586 100%);
+  font-size: 15px;
+  width: 80%;
+  font-weight: 400;
+}
+
+.card .card-body button:hover {
+  background: #916DB3;
+}
+
+.card .card-body .card_name {
+  font-weight: 400;
+  font-size: 1.1rem;
+  color: #121212;
+  text-decoration: none;
+}
+
+.card .card-body .card_price {
+  font-weight: bold;
+  color: #121212;
+}
+
+.card .card-body .card__hang {
+  color: #9EB384;
+}
+
+.hidenasp:hover {
+  text-decoration: none;
+}
+
+.popup-chitietsp .form__popupsp {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  align-items: center;
+  gap: 50px;
+  padding: 50px 0;
+}
+
+.popup-chitietsp .form__popupsp .img__sp img {
+  width: 100%;
+}
+
+.popup-chitietsp .form__popupsp .thongtin__sp {
+  max-width: 80%;
+  line-height: 2;
+}
+
+.popup-chitietsp .form__popupsp .thongtin__sp .verd15 {
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.popup-chitietsp .form__popupsp .thongtin__sp .chitetsp__bt__updown {
+  padding: 5px 5px;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #916DB3 0%, #E48586 100%);
+}
+
+.popup-chitietsp .form__popupsp .thongtin__sp .chitetsp__bt {
+  margin-top: 20px;
+  padding: 12px 60px;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #916DB3 0%, #E48586 100%);
+  font-size: 20px;
+}
+
+.bg__dk {
+  background: rgba(0, 0, 0, 0.4) url(../../img/ccc.jpg);
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: darken;
   width: 100%;
   height: 100vh;
 }
@@ -154,6 +269,7 @@ header .navbar-collapse a:hover {
 .gender ul {
   display: flex;
 }
+
 .gender ul li {
   list-style: none;
   padding-right: 100px;
@@ -211,15 +327,15 @@ header .navbar-collapse a:hover {
   margin: auto;
 }
 
-input[type=radio]:checked ~ .check {
+input[type=radio]:checked~.check {
   border: 5px solid white;
 }
 
-input[type=radio]:checked ~ .check::before {
+input[type=radio]:checked~.check::before {
   background: white;
 }
 
-input[type=radio]:checked ~ label {
+input[type=radio]:checked~label {
   color: white;
 }
 
@@ -350,4 +466,6 @@ body {
 
 form {
   padding-top: 40px;
-}/*# sourceMappingURL=main.css.map */
+}
+
+/*# sourceMappingURL=main.css.map */

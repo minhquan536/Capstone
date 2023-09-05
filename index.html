@@ -95,7 +95,7 @@
                         <div class="tab-content" id="myTabContent">
                             <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="home-tab">
                                 <!-- row: display flex -->
-                                <div class="row">
+                                <div id="allsp" class="row">
                                     <!--
                             lớn hơn 1200: 3 cột
                             lớn hơn 992: 3 c
@@ -107,56 +107,14 @@
                                         <div class="card">
                                             <img src="./asset/img/image 5.png" class="card-img-top" alt="...">
                                             <div class="card-body">
-                                                <h3>Apologetic </h3>
-                                                <p class="card-text">Branding</p>
+                                                <p class="card_name">Apologetic </p>
+                                                <p class="card_price">$ 99.9</p>
+                                                <p class="card__hang">adidas </p>
+                                                <button class="">Add</button>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-12 col-sm-6 col-lg-3 mb-4 ">
-                                        <div class="card">
-                                            <img src="./asset/img/image 5.png" class="card-img-top" alt="...">
-                                            <div class="card-body">
-                                                <h3>Apologetic </h3>
-                                                <p class="card-text">Branding</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-sm-6 col-lg-3 mb-4 ">
-                                        <div class="card">
-                                            <img src="./asset/img/image 5.png" class="card-img-top" alt="...">
-                                            <div class="card-body">
-                                                <h3>Apologetic </h3>
-                                                <p class="card-text">Branding</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-sm-6 col-lg-3 mb-4">
-                                        <div class="card">
-                                            <img src="./asset/img/image 5.png" class="card-img-top" alt="...">
-                                            <div class="card-body">
-                                                <h3>Apologetic </h3>
-                                                <p class="card-text">Branding</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-sm-6 col-lg-3 mb-4">
-                                        <div class="card">
-                                            <img src="./asset/img/image 5.png" class="card-img-top" alt="...">
-                                            <div class="card-body">
-                                                <h3>Apologetic </h3>
-                                                <p class="card-text">Branding</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-sm-6 col-lg-3 mb-4">
-                                        <div class="card">
-                                            <img src="./asset/img/image 5.png" class="card-img-top" alt="...">
-                                            <div class="card-body">
-                                                <h3>Apologetic </h3>
-                                                <p class="card-text">Branding</p>
-                                            </div>
-                                        </div>
-                                    </div>
+
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="Illustrations" role="tabpanel" aria-labelledby="profile-tab">
@@ -252,7 +210,7 @@
         </div>
 
     </section> -->
-
+    <!-- <a href="./view/dangki.html"></a> -->
     <section class="basket">
         <button type="button" class="" data-toggle="modal" data-target="#exampleModal">
             <i class="fa-regular fa-clipboard"></i>
@@ -260,7 +218,7 @@
     </section>
     <section class="popup">
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
+            <div class="modal-dialog modal-dialog-scrollable">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLabel">ALL PRODUCT</h5>
@@ -279,7 +237,7 @@
                                     <th>ACTION</th>
                                 </tr>
                             </thead>
-                            <tbody id="tbodySinhVien">
+                            <tbody id="tbodySanPham">
 
                             </tbody>
                         </table>
@@ -293,6 +251,41 @@
         </div>
     </section>
 
+
+
+    <section class="popup-chitietsp">
+        <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable">
+                <div id="popup-ctsp" class="modal-content">
+                    <!-- <div class="container">
+                        <div class="form__popupsp">
+                            <div class="img__sp">
+                                <img src="./asset/img/image 5.png" alt="">
+                            </div>
+                            <div class="thongtin__sp">
+                                <h1>aaaa</h1>
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore distinctio aperiam
+                                    corporis a ipsum voluptatibus harum assumenda quibusdam tenetur ab? Commodi iste
+                                    molestiae nam iure, sit voluptas alias ad illum!</p>
+                                <h3>SIZE</h3>
+                                <div>form size</div>
+                                <h3>$ 250</h3>
+                                <span class=verd13>
+                                    <button class="chitetsp__bt__updown" onclick="HmFunction()"><b>-</b></button>
+                                </span>
+                                <input type="number" id="HNumber" class="verd15" value="0">
+                                <span class=verd13>
+                                    <button class="chitetsp__bt__updown" onclick="HaFunction()"><b>+</b></button>
+                                </span>
+                                <button class="chitetsp__bt">add to cart</button>
+                            </div>
+                        </div>
+
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </section>
     <footer>
     </footer>
 
@@ -304,7 +297,24 @@
         integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
         crossorigin="anonymous"></script>
 
+    <!-- thư viện AXIOS -->
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
 
+    <script src="./controller/SanPham.js"></script>
+    <script src="./controller/DanhSachSanPham.js"></script>
+
+
+    <script src="./controller/main.js"></script>
+
+    <script>
+        function HaFunction() {
+            document.getElementById("HNumber").stepUp();
+        }
+
+        function HmFunction() {
+            document.getElementById("HNumber").stepDown();
+        }
+    </script>
 </body>
 
 </html>
