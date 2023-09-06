@@ -14,7 +14,15 @@ function hienThiSanPhamTrongGioHang(mang){
             <th><img src="${sp.image}" width="44" height="44"></th>
             <th>${sp.name}</th>
             <th>${sp.price}</th>
-            <th><input id="taolaymay" type="number" min="1" value="${sp.price}"></th>
+            <th>
+                <span class=verd13>
+                    <button class="chitetsp__bt__updown" onclick="HmFunction()"><b>-</b></button>
+                </span>
+                <input type="number" id="HNumber" class="verd15" value="1" min="1">
+                <span class=verd13>
+                    <button class="chitetsp__bt__updown" onclick="HaFunction()"><b>+</b></button>
+                </span>
+            </th>
             
             <th><p id"value-sp"></p></th>
             <th><button style="background-color: red; padding: 0 10px;border: none;" onclick="xoaSP(${sp.id})">X</button></th>
