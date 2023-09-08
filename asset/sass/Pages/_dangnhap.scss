@@ -1,7 +1,6 @@
-body {
-    height: 100vh;
-    // background: linear-gradient(#02073d, #e66465);
-}
+// body {
+//     height: 100vh;
+// }
 .login {
     background: linear-gradient(#02073d, #e66465);
     width: 100%;
@@ -11,15 +10,17 @@ body {
     height: 50px;
 }
 .login__small {
-    display: flex;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    // display: flex;
+    // position: absolute;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
     border: 2px solid white;
     border-radius: 20px;
     backdrop-filter: blur(20px);
-    width: 85%;
+    width: 90%;
+    margin: auto;
+    display: flex;
 }
 .login__text {
     width: 50%;
@@ -36,7 +37,6 @@ body {
         width: 100%;
         display: block;
         border-radius: 20px;
-        height: 100vh;
         // padding-left: 115px;
     }
 }
