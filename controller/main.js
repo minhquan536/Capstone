@@ -228,6 +228,26 @@ function showSPChiTiet(id) {
     hienThiThongTinSP(dssp.spChiTiet);
 }
 
+
+document.getElementById("loc").onclick = function() {
+    var tuTK = document.getElementById("lang-select").value;
+    // console.log(tuTK)
+    // // tạo biến lưu giá trị do bên searchByName có return về kết quả
+    var mangTK = dssp.searchByName(tuTK);
+    hienThiDS(mangTK);
+}
+
+// // ! tìm kiếm ngay khi nhập kí tự
+// // keyup, keydown
+// document.getElementById("txtSearch").onkeydown = function() {
+//     var tuTK = document.getElementById("txtSearch").value;
+
+//     // tạo biến lưu giá trị do bên searchByName có return về kết quả
+//     var mangTK = dssp.searchByName(tuTK);
+//     hienThiDS(mangTK);
+// }
+
+
 //dã xử lý localstorage => lưu token vào local
 
 // function checkAuth (){
