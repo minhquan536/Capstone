@@ -28,16 +28,12 @@
 }
 .login__img {
     width: 50%;
-
-    // background-position: center;
-    // background-repeat: no-repeat;
 }
 .login__img {
     img {
         width: 100%;
         display: block;
         border-radius: 20px;
-        // padding-left: 115px;
     }
 }
 .lable__tk,
@@ -107,4 +103,25 @@
 }
 form {
     padding-top: 40px;
+}
+@media screen and (max-width: 992px) {
+    .login__img {
+        img {
+            height: 100%;
+        }
+    }
+}
+@media screen and (max-width: 576px) {
+    .login__img {
+        display: none;
+    }
+    .login__text {
+        width: 100%;
+    }
+    .login__text {
+        a {
+            display: flex;
+            justify-content: center;
+        }
+    }
 }

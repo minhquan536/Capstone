@@ -131,4 +131,22 @@ input[type="radio"]:checked ~ label {
     }
 }
 @media screen and (max-width: 992px) {
+    .sign__img {
+        img {
+            height: 100%;
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .sign__img {
+        display: none;
+    }
+    .sign__text {
+        width: 100%;
+    }
+    .gender {
+        ul {
+            justify-content: center;
+        }
+    }
 }
