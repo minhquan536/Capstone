@@ -40,6 +40,12 @@ body {
 header {
   box-shadow: 0 2px 4px rgba(145, 109, 179, 0.2862745098);
 }
+header .navbar-toggler {
+  padding: 15px 15px;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #916DB3 0%, #E48586 100%);
+}
 header .navbar-brand {
   color: #121212;
   font-size: 1.8rem;
@@ -98,6 +104,17 @@ header .navbar-collapse a:hover {
 .basket button i {
   color: #121212;
   font-size: 25px;
+  position: relative;
+}
+.basket button i p {
+  position: absolute;
+  background-color: red;
+  padding: 5px 8px;
+  color: #121212;
+  font-size: 15px;
+  border-radius: 50%;
+  top: -20px;
+  right: -20px;
 }
 
 .modal-dialog {
@@ -201,12 +218,19 @@ header .navbar-collapse a:hover {
   max-width: 80%;
   line-height: 2;
 }
+.popup-chitietsp .form__popupsp .thongtin__sp .price-red {
+  padding-top: 10px;
+  color: red;
+  font-size: 30px;
+  font-weight: bold;
+}
 .popup-chitietsp .form__popupsp .thongtin__sp .verd15 {
   padding: 5px;
   border-radius: 5px;
+  max-width: 50px;
 }
 .popup-chitietsp .form__popupsp .thongtin__sp .chitetsp__bt__updown {
-  padding: 5px 5px;
+  padding: 5px 15px;
   border: none;
   border-radius: 5px;
   background: linear-gradient(90deg, #916DB3 0%, #E48586 100%);
@@ -218,6 +242,28 @@ header .navbar-collapse a:hover {
   border-radius: 5px;
   background: linear-gradient(90deg, #916DB3 0%, #E48586 100%);
   font-size: 20px;
+}
+.popup-chitietsp .form__popupsp .thongtin__sp .bt--size {
+  padding: 5px 5px;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #916DB3 0%, #E48586 100%);
+  transition: all 0.5s;
+}
+.popup-chitietsp .form__popupsp .thongtin__sp .bt--size:hover {
+  background: #E48586;
+}
+
+.popup-cart .chitetsp__bt__updown {
+  padding: 5px 15px;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #916DB3 0%, #E48586 100%);
+}
+.popup-cart .verd15 {
+  padding: 5px;
+  border-radius: 5px;
+  max-width: 50px;
 }
 
 .sign {
@@ -451,4 +497,30 @@ body {
 
 form {
   padding-top: 40px;
+}
+
+@media only screen and (min-width: 300px) {
+  .carousel .container .text h1 {
+    font-size: 35px;
+  }
+}
+@media only screen and (min-width: 576px) {
+  .carousel .container .text h1 {
+    font-size: 40px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .carousel .container .text h1 {
+    font-size: 50px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .carousel .container .text h1 {
+    font-size: 60px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .carousel .container .text h1 {
+    font-size: 70px;
+  }
 }/*# sourceMappingURL=main.css.map */

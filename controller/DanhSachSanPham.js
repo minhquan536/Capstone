@@ -63,6 +63,15 @@ token:'1231231231231231'}
         
     }
 
+    this.soSanPhamTrongGio = function () {
+        var tongSPCart =0;
+        for (const a of this.mangSPAdd) {
+            tongSPCart++;
+        }
+        return tongSPCart;
+
+    }
+
     // this.addSP = function (id) {
     //     // Đang bị lỗi ở đây phải ko
     //     // console.log(this.mangSPAll,id)
@@ -89,7 +98,12 @@ token:'1231231231231231'}
     //         this.mangSPAdd[indexUpdate] = id;
     //     }
     // }
+    this.mangAllSize = [];
 
+    this.formSize = (size) => {
+        this.mangAllSize= [...size];
+        console.log( this.mangAllSize);
+    }
 }
 
 

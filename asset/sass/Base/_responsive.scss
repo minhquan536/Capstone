@@ -1,1 +1,36 @@
 //chỉnh responsive chung cả web
+@media only screen and (min-width: 300px) {
+    .carousel .container .text h1 {
+        font-size: 35px;
+        // color: $color-blue-4;
+    }
+}
+
+@media only screen and (min-width: 576px) {
+    .carousel .container .text h1 {
+        font-size: 40px;
+        // color: $color-blue-4;
+    }
+}   
+
+@media only screen and (min-width: 768px) {
+    .carousel .container .text h1 {
+        font-size: 50px;
+        // color: $color-blue-4;
+        // color: blue;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .carousel .container .text h1 {
+        font-size: 60px;
+        // color: red;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .carousel .container .text h1 {
+        font-size: 70px;
+        // color: yellow;
+    }
+}
