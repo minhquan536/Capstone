@@ -31,22 +31,22 @@
                 <form>
                     <div class="form-group">
                         <label class="lable__tk" for="exampleInputEmail1">Tài khoản</label>
-                        <input type="email" class="form-control email" id="exampleInputEmail1"
-                            placeholder="name@example.com" aria-describedby="emailHelp">
-                        <span id="spanTK" class="text-danger"></span>
+                        <input type="email" class="form-control email" id="emailLogin" placeholder="name@example.com"
+                            aria-describedby="emailHelp">
+                        <span id="spanTK" class="text-warning spanTB"></span>
                         <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
                             else.</small>
                     </div>
                     <div class="form-group">
                         <label class="lable__mk" for="exampleInputPassword1">Mật khẩu</label>
-                        <input type="password" class="form-control matKhau" id="exampleInputPassword1"
+                        <input type="password" class="form-control matKhau" id="matKhauLogin"
                             placeholder="Mật khẩu của bạn">
-                        <span id="spanMK" class="text-danger"></span>
+                        <span id="spanMK" class="text-warning spanTB"></span>
                     </div>
 
 
                     <div class="btn">
-                        <button type="submit" class="btn btn-primary login__btn">Submit</button>
+                        <button id="btn__Login" type="button" class="btn btn-primary login__btn">Submit</button>
                         <button type="submit" class="btn btn-primary btn__home"><a
                                 href="../index.html">Home</a></button>
                     </div>
@@ -64,8 +64,9 @@
 
     <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
     <script src="../model/user.js"></script>
-    <script src="../model/sign.js"></script>
-    <script src="../model/log.js"></script>
+    <script src="../model/Validation.js"></script>
+    <script src="../model/login.js"></script>
+
 </body>
 
 </html>

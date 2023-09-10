@@ -10,7 +10,7 @@ function Validation() {
         return false;
     }
     this.checkMatKhau = function (value, message, spanID) {
-        var pattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{6,10}$/
+        var pattern = /^(?=.*[0-9])(?=.*[A-Z])[a-zA-Z0-9]{6,9}$/;
         if (value.match(pattern)) {
             //hợp lệ 
             document.getElementById(spanID).innerHTML = "";
