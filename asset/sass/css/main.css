@@ -296,6 +296,10 @@ header .navbar-collapse a:hover {
   margin: auto;
 }
 
+.spanTB {
+  font-size: 20px;
+}
+
 input[type=radio]:checked ~ .check {
   border: 5px solid white;
 }
