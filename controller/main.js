@@ -358,3 +358,6 @@ Product();
 
 //! ri trừ điểm cấu trúc code ah nghe
 getLocalStorage()
+
+// !hiển thị cái số trên nút click giỏ hàng
+demSoSpTrongGio()

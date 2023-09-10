@@ -234,6 +234,10 @@ header .navbar-collapse a:hover {
   border: none;
   border-radius: 5px;
   background: linear-gradient(90deg, #916DB3 0%, #E48586 100%);
+  transition: all 0.5s;
+}
+.popup-chitietsp .form__popupsp .thongtin__sp .chitetsp__bt__updown:hover {
+  background: #E48586;
 }
 .popup-chitietsp .form__popupsp .thongtin__sp .chitetsp__bt {
   margin-top: 20px;
@@ -242,6 +246,10 @@ header .navbar-collapse a:hover {
   border-radius: 5px;
   background: linear-gradient(90deg, #916DB3 0%, #E48586 100%);
   font-size: 20px;
+  transition: all 0.5s;
+}
+.popup-chitietsp .form__popupsp .thongtin__sp .chitetsp__bt:hover {
+  background: #E48586;
 }
 .popup-chitietsp .form__popupsp .thongtin__sp .bt--size {
   padding: 5px 5px;
@@ -503,20 +511,50 @@ form {
   .carousel .container .text h1 {
     font-size: 35px;
   }
+  .popup-chitietsp .form__popupsp .thongtin__sp .chitetsp__bt {
+    padding: 5px 5px;
+  }
+  .thongtin__sp h2 {
+    font-size: 1.5rem;
+  }
+  .thongtin__sp .bt--size {
+    padding: 2px 2px;
+  }
+  .thongtin__sp p {
+    display: none;
+  }
+  .thongtin__sp .chitetsp__bt__updown {
+    padding: 2px 2px;
+  }
 }
 @media only screen and (min-width: 576px) {
   .carousel .container .text h1 {
     font-size: 40px;
+  }
+  .popup-chitietsp .form__popupsp .thongtin__sp .chitetsp__bt {
+    padding: 10px 20px;
   }
 }
 @media only screen and (min-width: 768px) {
   .carousel .container .text h1 {
     font-size: 50px;
   }
+  .thongtin__sp h2 {
+    font-size: 2rem;
+  }
+  .thongtin__sp .bt--size {
+    padding: 5px 5px;
+  }
+  .thongtin__sp p {
+    display: block;
+  }
 }
 @media only screen and (min-width: 992px) {
   .carousel .container .text h1 {
     font-size: 60px;
+  }
+  .popup-chitietsp .form__popupsp .thongtin__sp .chitetsp__bt {
+    padding: 15px 60px;
   }
 }
 @media only screen and (min-width: 1200px) {
