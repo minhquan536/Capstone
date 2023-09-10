@@ -26,6 +26,17 @@
         i{
             color: $color-dark-2;
             font-size: 25px;
+            position: relative;
+            p{
+                position: absolute;
+                background-color: red;
+                padding: 5px 8px;
+                color: $color-dark-2;
+                font-size: 15px;
+                border-radius: 50%;
+                top: -20px;
+                right: -20px;
+            }
         }
     }
 }

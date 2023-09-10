@@ -1,4 +1,10 @@
 header{
+    .navbar-toggler{
+        @include button($pd-2,$pd-2,$radius-1);
+            background: linear-gradient(90deg, $color-white-3 0%, $color-white-2 100%);
+    }
+    
+
     box-shadow: 0 2px 4px #916db349;
     .navbar-brand{
         @include headerStyle($color-dark-2,$fs-3,$fw-3);
