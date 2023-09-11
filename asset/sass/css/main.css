@@ -66,6 +66,27 @@ header .navbar-collapse a:hover {
   font-weight: 400;
 }
 
+.info-log {
+  align-items: center;
+}
+
+.name__user {
+  margin: 0;
+  font-size: 20px;
+  color: black;
+}
+
+.icon__user {
+  font-size: 20px;
+  color: black;
+}
+
+.dropdown__user {
+  background-color: transparent;
+  border: none;
+  margin: 0;
+}
+
 .carousel {
   padding-top: 50px;
 }
@@ -277,7 +298,7 @@ header .navbar-collapse a:hover {
 .sign {
   background: linear-gradient(#e66465, #02073d);
   width: 100%;
-  height: 100vh;
+  height: 100%;
 }
 
 .sign__small {
@@ -286,7 +307,6 @@ header .navbar-collapse a:hover {
 
 .sign__text {
   width: 50%;
-  height: 100vh;
   padding: 0px 20px 0px 20px;
 }
 
@@ -365,6 +385,10 @@ header .navbar-collapse a:hover {
   margin: auto;
 }
 
+.spanTB {
+  font-size: 20px;
+}
+
 input[type=radio]:checked ~ .check {
   border: 5px solid white;
 }
@@ -383,15 +407,26 @@ input[type=radio]:checked ~ label {
 
 .sign__img img {
   width: 100%;
-  height: 100vh;
   display: block;
   border-radius: 20px;
 }
 
-body {
-  height: 100vh;
+@media screen and (max-width: 992px) {
+  .sign__img img {
+    height: 100%;
+  }
 }
-
+@media screen and (max-width: 768px) {
+  .sign__img {
+    display: none;
+  }
+  .sign__text {
+    width: 100%;
+  }
+  .gender ul {
+    justify-content: center;
+  }
+}
 .login {
   background: linear-gradient(#02073d, #e66465);
   width: 100%;
@@ -402,16 +437,17 @@ body {
   height: 50px;
 }
 
+.spanT {
+  font-size: 20px;
+}
+
 .login__small {
-  display: flex;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   border: 2px solid white;
   border-radius: 20px;
   backdrop-filter: blur(20px);
-  width: 85%;
+  width: 90%;
+  margin: auto;
+  display: flex;
 }
 
 .login__text {
@@ -427,7 +463,6 @@ body {
   width: 100%;
   display: block;
   border-radius: 20px;
-  height: 100vh;
 }
 
 .lable__tk,
@@ -479,7 +514,7 @@ body {
   border: 1px solid white;
 }
 
-.btn {
+.btnLog {
   display: flex;
   justify-content: space-between;
 }
@@ -499,7 +534,7 @@ body {
   color: rgb(3, 3, 75);
 }
 
-.btn {
+.btnLog {
   margin: 30px 0;
 }
 
@@ -507,6 +542,23 @@ form {
   padding-top: 40px;
 }
 
+<<<<<<< HEAD
+@media screen and (max-width: 992px) {
+  .login__img img {
+    height: 100%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .login__img {
+    display: none;
+  }
+  .login__text {
+    width: 100%;
+  }
+  .login__text a {
+    display: flex;
+    justify-content: center;
+=======
 @media only screen and (min-width: 300px) {
   .carousel .container .text h1 {
     font-size: 35px;
@@ -560,5 +612,6 @@ form {
 @media only screen and (min-width: 1200px) {
   .carousel .container .text h1 {
     font-size: 70px;
+>>>>>>> 0c27b2eaaf0a8c949de08d9fe5119a4971a0b367
   }
 }/*# sourceMappingURL=main.css.map */

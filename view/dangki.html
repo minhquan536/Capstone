@@ -31,21 +31,19 @@
                 <form>
                     <div class="form-group">
                         <label class="lable__tk" for="exampleInputEmail1">Tài khoản</label>
-                        <input type="email" class="form-control taiKhoan" id="exampleInputEmail1"
-                            placeholder="name@example.com" aria-describedby="emailHelp">
-                        <span id="spanTK" class="text-danger"></span>
+                        <input type="email" class="form-control taiKhoan" id="email" placeholder="name@example.com"
+                            aria-describedby="emailHelp">
+                        <span id="spanTKUP" class="text-warning spanTB"></span>
                     </div>
                     <div class="form-group">
                         <label class="lable__mk" for="exampleInputPassword1">Mật khẩu</label>
-                        <input type="password" class="form-control matKhau" id="exampleInputPassword1"
-                            placeholder="Mật khẩu của bạn">
-                        <span id="spanMK" class="text-danger"></span>
+                        <input type="password" class="form-control matKhau" id="matKhau" placeholder="Mật khẩu của bạn">
+                        <span id="spanMKUP" class="text-warning spanTB"></span>
                     </div>
                     <div class="form-group">
                         <label class="lable__name" for="exampleInputPassword1">Họ và tên</label>
-                        <input type="text" class="form-control hoTen" id="exampleInputPassword1"
-                            placeholder="Nhập họ và tên">
-                        <span id="spanTen" class="text-danger"></span>
+                        <input type="text" class="form-control hoTen" id="hoTen" placeholder="Nhập họ và tên">
+                        <span id="spanTenUP" class="text-warning spanTB"></span>
                     </div>
                     <div class="gender">
                         <h2>Chọn giới tính</h2>
@@ -53,13 +51,11 @@
                             <li class="type">
                                 <input id="Nam" type="radio" name="selector">
                                 <label for="Nam">Nam</label>
-
                                 <div class="check"></div>
                             </li>
-
                             <li class="type">
-                                <input id="Nữ" type="radio" name="selector">
-                                <label for="Nữ">Nữ</label>
+                                <input id="Nu" type="radio" name="selector">
+                                <label for="Nu">Nữ</label>
                                 <div class="check"></div>
                             </li>
                         </ul>
@@ -68,12 +64,12 @@
 
                     <div class="form-group">
                         <label class="lable__SDT" for="exampleInputPassword1">Số điện thoại</label>
-                        <input type="number" class="form-control SDT" id="exampleInputPassword1"
-                            placeholder="Nhập số điện thoại">
-                        <span id="spanSDT" class="text-danger"></span>
+                        <input type="text" class="form-control SDT" id="SDT" placeholder="Nhập số điện thoại">
+                        <span id="spanSDTUP" class="text-warning spanTB"></span>
                     </div>
-                    <div class="btn"><button type="submit" class="btn btn-primary login__btn sign__btn">Submit</button>
-                        <button type="submit" class="btn btn-primary btn__home"><a
+                    <div class="btnLog"><button id="btn__sign" type="button"
+                            class="btn btn-primary login__btn sign__btn">Submit</button>
+                        <button id="btn__home" type="button" class="btn btn-primary btn__home"><a
                                 href="../index.html">Home</a></button>
                     </div>
 
@@ -85,6 +81,12 @@
 
         </div>
     </div>
+
+
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="../model/user.js"></script>
+    <script src="../model/Validation.js"></script>
+    <script src="../model/sign.js"></script>
 </body>
 
 </html>

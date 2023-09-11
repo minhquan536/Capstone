@@ -1,14 +1,13 @@
 .sign {
     background: linear-gradient(#e66465, #02073d);
     width: 100%;
-    height: 100vh;
+    height: 100%;
 }
 .sign__small {
     padding: 0px 0 0 15px;
 }
 .sign__text {
     width: 50%;
-    height: 100vh;
     padding: 0px 20px 0px 20px;
 }
 .sign__btn:hover {
@@ -111,6 +110,9 @@
         }
     }
 }
+.spanTB {
+    font-size: 20px;
+}
 input[type="radio"]:checked ~ .check {
     border: 5px solid white;
 }
@@ -127,8 +129,28 @@ input[type="radio"]:checked ~ label {
 .sign__img {
     img {
         width: 100%;
-        height: 100vh;
         display: block;
         border-radius: 20px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .sign__img {
+        img {
+            height: 100%;
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .sign__img {
+        display: none;
+    }
+    .sign__text {
+        width: 100%;
+    }
+    .gender {
+        ul {
+            justify-content: center;
+        }
     }
 }
