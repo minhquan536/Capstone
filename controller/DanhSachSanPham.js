@@ -63,6 +63,15 @@ token:'1231231231231231'}
         
     }
 
+    this.soSanPhamTrongGio = function () {
+        var tongSPCart =0;
+        for (const a of this.mangSPAdd) {
+            tongSPCart++;
+        }
+        return tongSPCart;
+
+    }
+
     // this.addSP = function (id) {
     //     // Đang bị lỗi ở đây phải ko
     //     // console.log(this.mangSPAll,id)
@@ -89,7 +98,12 @@ token:'1231231231231231'}
     //         this.mangSPAdd[indexUpdate] = id;
     //     }
     // }
+    this.mangAllSize = [];
 
+    this.formSize = (size) => {
+        this.mangAllSize= [...size];
+        console.log( this.mangAllSize);
+    }
 }
 
 
@@ -108,4 +122,30 @@ token:'1231231231231231'}
 
 //=> show ds gio hang
 
+DanhSachSanPham.prototype.searchByName = function (tuTK) {
+    var mangTK = [];
+
+    //todo chỉ dùng khi hàm có return kết quả, vidu(toLowerCase()), hàm không có rturn ko dùng dc
+    var tuTKXoaSpace = tuTK.toLowerCase().replace(/\s/g, "");
+    console.log(tuTKXoaSpace)
+
+    this.mangSPAll.map(function (sp) {
+        // sv.tenSV có nghĩa là gọi từ class SinhVien không phải là bên main dòng document
+        // var tenThuong = sv.tenSV.toLowerCase();
+        // var tenXoaSpace = tenThuong.replace(/\s/g, "")
+        // console.log(tenXoaSpace);
+        // indexOf() được sử dụng để kiểm tra xem một chuỗi có chứa một chuỗi con cụ thể hay không. Nếu chuỗi con có thể được tìm thấy trong chuỗi, hàm indexOf() sẽ trả về vị trí xuất hiện đầu tiên của phần tử chuỗi. Nếu không, hàm sẽ trả về -1.
+        // var indexTK = tenXoaSpace.indexOf(tuTKXoaSpace);
+        //? rút gọn
+        var indexTK = sp.name.toLowerCase().replace(/\s/g, "").indexOf(tuTKXoaSpace);
+
+        // todo type: kiểu dữ liệu, quan trọng bên typecript
+        //! có hỏi phỏng vấn :  Kết quả ( 0 = > n ) => type: mảng đối tượng
+        if(indexTK > -1){
+            // tìm thấy (0 kết quả đến n kết quả, kiếm ko dc là = 0) => lưu sv vào mảng tìm kiếm(mangTK)
+            mangTK.push(sp);
+        }
+    })
+    return mangTK;
+}
 

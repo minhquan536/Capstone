@@ -5,6 +5,21 @@
         font-weight: bold;
     }
 }
+// .card {
+//     .form_over {
+.project__content {
+    .nav {
+        align-items: center;
+        form {
+            padding-top: 5px;
+            button {
+                @include button($pd-8, $pd-1, $radius-1);
+                background: linear-gradient(90deg, $color-white-3 0%, $color-white-2 100%);
+                font-size: 20px;
+            }
+        }
+    }
+}
 .card {
     .form_over {
         min-height: 500px;

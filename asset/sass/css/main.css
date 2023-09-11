@@ -40,6 +40,12 @@ body {
 header {
   box-shadow: 0 2px 4px rgba(145, 109, 179, 0.2862745098);
 }
+header .navbar-toggler {
+  padding: 15px 15px;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #916DB3 0%, #E48586 100%);
+}
 header .navbar-brand {
   color: #121212;
   font-size: 1.8rem;
@@ -119,6 +125,17 @@ header .navbar-collapse a:hover {
 .basket button i {
   color: #121212;
   font-size: 25px;
+  position: relative;
+}
+.basket button i p {
+  position: absolute;
+  background-color: red;
+  padding: 5px 8px;
+  color: #121212;
+  font-size: 15px;
+  border-radius: 50%;
+  top: -20px;
+  right: -20px;
 }
 
 .modal-dialog {
@@ -140,6 +157,20 @@ header .navbar-collapse a:hover {
 .project__title h2 {
   font-size: 40px;
   font-weight: bold;
+}
+
+.project__content .nav {
+  align-items: center;
+}
+.project__content .nav form {
+  padding-top: 5px;
+}
+.project__content .nav form button {
+  padding: 5px 25px;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #916DB3 0%, #E48586 100%);
+  font-size: 20px;
 }
 
 .card {
@@ -208,15 +239,26 @@ header .navbar-collapse a:hover {
   max-width: 80%;
   line-height: 2;
 }
+.popup-chitietsp .form__popupsp .thongtin__sp .price-red {
+  padding-top: 10px;
+  color: red;
+  font-size: 30px;
+  font-weight: bold;
+}
 .popup-chitietsp .form__popupsp .thongtin__sp .verd15 {
   padding: 5px;
   border-radius: 5px;
+  max-width: 50px;
 }
 .popup-chitietsp .form__popupsp .thongtin__sp .chitetsp__bt__updown {
-  padding: 5px 5px;
+  padding: 5px 15px;
   border: none;
   border-radius: 5px;
   background: linear-gradient(90deg, #916DB3 0%, #E48586 100%);
+  transition: all 0.5s;
+}
+.popup-chitietsp .form__popupsp .thongtin__sp .chitetsp__bt__updown:hover {
+  background: #E48586;
 }
 .popup-chitietsp .form__popupsp .thongtin__sp .chitetsp__bt {
   margin-top: 20px;
@@ -225,6 +267,32 @@ header .navbar-collapse a:hover {
   border-radius: 5px;
   background: linear-gradient(90deg, #916DB3 0%, #E48586 100%);
   font-size: 20px;
+  transition: all 0.5s;
+}
+.popup-chitietsp .form__popupsp .thongtin__sp .chitetsp__bt:hover {
+  background: #E48586;
+}
+.popup-chitietsp .form__popupsp .thongtin__sp .bt--size {
+  padding: 5px 5px;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #916DB3 0%, #E48586 100%);
+  transition: all 0.5s;
+}
+.popup-chitietsp .form__popupsp .thongtin__sp .bt--size:hover {
+  background: #E48586;
+}
+
+.popup-cart .chitetsp__bt__updown {
+  padding: 5px 15px;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #916DB3 0%, #E48586 100%);
+}
+.popup-cart .verd15 {
+  padding: 5px;
+  border-radius: 5px;
+  max-width: 50px;
 }
 
 .sign {
@@ -474,6 +542,7 @@ form {
   padding-top: 40px;
 }
 
+<<<<<<< HEAD
 @media screen and (max-width: 992px) {
   .login__img img {
     height: 100%;
@@ -489,5 +558,60 @@ form {
   .login__text a {
     display: flex;
     justify-content: center;
+=======
+@media only screen and (min-width: 300px) {
+  .carousel .container .text h1 {
+    font-size: 35px;
+  }
+  .popup-chitietsp .form__popupsp .thongtin__sp .chitetsp__bt {
+    padding: 5px 5px;
+  }
+  .thongtin__sp h2 {
+    font-size: 1.5rem;
+  }
+  .thongtin__sp .bt--size {
+    padding: 2px 2px;
+  }
+  .thongtin__sp p {
+    display: none;
+  }
+  .thongtin__sp .chitetsp__bt__updown {
+    padding: 2px 2px;
+  }
+}
+@media only screen and (min-width: 576px) {
+  .carousel .container .text h1 {
+    font-size: 40px;
+  }
+  .popup-chitietsp .form__popupsp .thongtin__sp .chitetsp__bt {
+    padding: 10px 20px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .carousel .container .text h1 {
+    font-size: 50px;
+  }
+  .thongtin__sp h2 {
+    font-size: 2rem;
+  }
+  .thongtin__sp .bt--size {
+    padding: 5px 5px;
+  }
+  .thongtin__sp p {
+    display: block;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .carousel .container .text h1 {
+    font-size: 60px;
+  }
+  .popup-chitietsp .form__popupsp .thongtin__sp .chitetsp__bt {
+    padding: 15px 60px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .carousel .container .text h1 {
+    font-size: 70px;
+>>>>>>> 0c27b2eaaf0a8c949de08d9fe5119a4971a0b367
   }
 }/*# sourceMappingURL=main.css.map */

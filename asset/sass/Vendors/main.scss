@@ -10,9 +10,6 @@
 @import "../Base/customize";
 
 
-// code repon dùng chung
-@import "../Base/responsive";
-
 //components  : button
 @import "../Components/button";
 
@@ -27,4 +24,7 @@
 //Pages
 @import "../Pages/dangki";
 @import "../Pages/dangnhap";
-//Theme
+//Theme.
+
+// code repon dùng chung
+@import "../Base/responsive";
