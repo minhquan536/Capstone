@@ -189,7 +189,6 @@ function addGioHang(id) {
         getLocalStorage();
         //TODO: Hiển thị danh sách
         hienThiSanPhamTrongGioHang(dssp.mangSPAdd)
-
         //     var promiseObj = axios({
         //         method: 'get',
         //         url: 'https://shop.cyberlearn.vn/api/Product',
