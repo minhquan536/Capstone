@@ -85,6 +85,8 @@ header .navbar-collapse a:hover {
   background-color: transparent;
   border: none;
   margin: 0;
+  display: flex;
+  text-align: center;
 }
 
 .carousel {
@@ -542,7 +544,6 @@ form {
   padding-top: 40px;
 }
 
-<<<<<<< HEAD
 @media screen and (max-width: 992px) {
   .login__img img {
     height: 100%;
@@ -558,7 +559,8 @@ form {
   .login__text a {
     display: flex;
     justify-content: center;
-=======
+  }
+}
 @media only screen and (min-width: 300px) {
   .carousel .container .text h1 {
     font-size: 35px;
@@ -612,6 +614,5 @@ form {
 @media only screen and (min-width: 1200px) {
   .carousel .container .text h1 {
     font-size: 70px;
->>>>>>> 0c27b2eaaf0a8c949de08d9fe5119a4971a0b367
   }
 }/*# sourceMappingURL=main.css.map */
