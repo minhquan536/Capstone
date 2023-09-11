@@ -8,7 +8,7 @@ function signUp() {
     var gender = kiemTraGioiTinh(nam, nu);
     var phone = document.getElementById("SDT").value;
     var isValid = true;
-    isValid &= validation.checkEmpty(email, "Tài Khoản không được để trống", "spanTKUP");
+    isValid &= validation.checkEmpty(email, "Tài Khoản không được để trống", "spanTKUP") && validation.checkEmail(email, "Email không đúng định dạng", "spanTKUP")
     isValid &= validation.checkEmpty(password, "Mật khẩu không được để trống", "spanMKUP") && validation.checkMatKhau(password, "Mật khẩu từ 6-10 ký tự chứa ít nhất 1 ký tự số, 1 ký tự in hoa", "spanMKUP");
     isValid &= validation.checkEmpty(name, "Họ tên không được để trống", "spanTenUP") && validation.checkHoTen(name, "Họ tên không hợp lệ", "spanTenUP");
     isValid &= validation.checkEmpty(phone, "Số điện thoại không được để trống", "spanSDTUP") && validation.checkSDT(phone, "Số điện thoại không hợp lệ ", "spanSDTUP");
