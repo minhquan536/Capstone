@@ -3,27 +3,10 @@ var dssp = new DanhSachSanPham();
 function setLocalStorage() {
     localStorage.setItem("DSSP", JSON.stringify(dssp.mangSPAdd));
 }
-function remove() {
-    localStorage.removeItem("user");
-    getLocalStorage();
-    window.location.reload()
-}
-document.getElementById("logout").onclick = remove
 
-// ẩn đi nút đăng nhập, đăng ký nếu đã đăng nhập và ngược lại
-function changeLog() {
-    var isLogIn = localStorage.getItem("user");
-    if (isLogIn) {
-        document.getElementById("loginButton").style.display = "none";
-        document.getElementById("signButton").style.display = "none";
-    } else {
-        document.getElementById("btnLog").style.display = "none";
-    }
-}
-changeLog();
-
-function hienThiSanPhamTrongGioHang(mang) {
-    var content = "";
+function hienThiSanPhamTrongGioHang(mang){
+    var content ="";
+    
     mang.map(function (sp) {
         content += `
         <tr class="popup-cart">
@@ -45,14 +28,15 @@ function hienThiSanPhamTrongGioHang(mang) {
             <th><button style="background-color: red; padding: 0 10px;border: none;" onclick="xoaSP(${sp.id})">X</button></th>
         </tr>
         `;
-    })
 
+    })
+    
     document.querySelector("#tbodySanPham").innerHTML = content;
 }
 
-function hienThiThongTinSP(mang) {
-    var content = "";
-
+function hienThiThongTinSP(mang){
+    var content ="";
+    
     mang.map(function (sp) {
         // console.log(sp.size)
         // console.log(Array(sp.size))
@@ -83,10 +67,8 @@ function hienThiThongTinSP(mang) {
                                 <input type="number" id="HNumber" class="verd15" value="0" min="1">
                                 <span class=verd13>
                                     <button class="chitetsp__bt__updown" onclick="HaFunction()"><b>+</b></button>
-                                </span>
-                                <button class="chitetsp__bt" onclick="addGioHang(${sp.id - 1})">add to cart</button>
                                 </span><br>
-                                <button class="chitetsp__bt" onclick="addGioHang(${sp.id - 1})">add to cart</button>
+                                <button class="chitetsp__bt" onclick="addGioHang(${sp.id-1})">add to cart</button>
                             </div>
                         </div>
 
@@ -101,7 +83,7 @@ function hienThiThongTinSP(mang) {
         //     if (index > 0) {
         //         size += `<button>${classColor}</button>` ;  
         //     }
-
+    
         // });
         // console.log(dssp.mangAllSize);
         // document.querySelector(".project__title").innerHTML = size;
@@ -153,14 +135,14 @@ function hienThiDS(mang) {
     mang.map(function (sp) {
         content += `
         <div class="col-12 col-sm-6 col-lg-4 mb-4 ">
-            <div class="card" onclick="showSPChiTiet(${sp.id - 1})">
+            <div class="card" onclick="showSPChiTiet(${sp.id-1})">
             <button class="form_over" type="button" data-toggle="modal" data-target="#exampleModal1">
                     <img src="${sp.image}" class="card-img-top" alt="...">
                     <div class="card-body">
                         <p class="card_name">${sp.name}</p>
                         <p class="card_price">$ ${sp.price}</p>
                         <p class="card__hang">${sp.alias} </p>
-                        <button style="border:none;" class="addCart" id="bt__addCart" onclick="addGioHang(${sp.id - 1})">Add to cart</button>
+                        <button style="border:none;" class="addCart" id="bt__addCart" onclick="addGioHang(${sp.id-1})">Add to cart</button>
                     </div>
             </button>
             </div>
@@ -168,16 +150,75 @@ function hienThiDS(mang) {
         </div>
         `
     })
-    console.log(document.getElementById("allsp"))
     // console.log( document.getElementById("allsp"))
     document.getElementById("allsp").innerHTML = content;
 }
-{/* <a class="hidenasp" onclick="showSP(${sp.id-1})" tyle="text-decoration: none" href=""></a> */ }
+{/* <a class="hidenasp" onclick="showSP(${sp.id-1})" tyle="text-decoration: none" href=""></a> */}
 
 
 
 
 function addGioHang(id) {
+    // console.log(id);
+//     var promiseObj = axios({
+//         method: 'get',
+//         url: 'https://shop.cyberlearn.vn/api/Product',
+//     });//pending
+
+//     // then, catch : thành công, thất bại
+//     // result , response
+//     promiseObj.then(function (result) {
+//         // thành công
+//         // console.log(result);// mỗi BE trả về kết quả khác nhau
+//         // axios tự chuyển kiểu dữ liệu Json sang mảng(Array)
+//         var cc = result.data
+//         var ccc =cc.content
+//         var cccc = ccc[id];
+
+//         let ids = cccc.id;
+//         let name = cccc.name; 
+//         let alias = cccc.alias;
+//         let price = cccc.price;
+//         let description = cccc.description;
+//         let size = cccc.size;
+//         let shortDescription = cccc.shortDescription;
+//         let quantity = cccc.quantity;
+//         let image = cccc.image;
+//         console.log(name);
+//         console.log(alias);
+//         console.log(price);
+
+
+//         // console.log(cccc.name);
+//         var sp = new SanPham(id,name,alias,price,1,size,shortDescription,quantity,image);
+//         dssp.themSP(sp);
+//         // console.log(dssp.mangSPAdd);
+//         setLocalStorage();
+//         getLocalStorage();
+//         //TODO: Hiển thị danh sách
+//         hienThiGioHang(dssp.mangSPAdd);
+//         // tìm kiếm sp trong mangAll
+// // kiêm tra ton tại ở mangAdd
+// //=> chưa tồn tại thì thêm sp vao mangAdd
+// //=> đã tồn tại rồi, tăng số lượng thêm 1
+// //=> show ds gio hang
+//     });
+//     promiseObj.catch(function (error) {
+//         // thất bại
+//         console.log(error);
+//         // alert("hệ thống đang bảo trì")
+//     });
+    // console.log(dssp.mangSPAll[id]);
+    // this.mangSPAll=[...ds] => chuyền id sẽ chuyền hết 
+    dssp.themSP(dssp.mangSPAll[id]);
+    setLocalStorage();
+
+    getLocalStorage();
+
+    //TODO: Hiển thị danh sách
+    
+    hienThiSanPhamTrongGioHang(dssp.mangSPAdd);
+    demSoSpTrongGio();
     var userlog = document.getElementById("user").textContent;
     console.log(id);
     if (userlog != "") {
@@ -288,14 +329,9 @@ function getLocalStorage() {
         // JSON.parse
         dssp.mangSPAdd = JSON.parse(localStorage.getItem("DSSP"));
         hienThiSanPhamTrongGioHang(dssp.mangSPAdd);
-
-    };
-    if (localStorage.getItem("user") != null) {
-        var user = JSON.parse(localStorage.getItem("user"));
-        document.getElementById("user").innerHTML = user.data.content.email;
     }
 }
-getLocalStorage();
+
 
 function xoaSP(id) {
     // console.log(id);
@@ -326,7 +362,7 @@ function showSPChiTiet(id) {
 }
 
 
-document.getElementById("loc").onclick = function () {
+document.getElementById("loc").onclick = function() {
     var tuTK = document.getElementById("lang-select").value;
     // console.log(tuTK)
     // // tạo biến lưu giá trị do bên searchByName có return về kết quả
@@ -360,7 +396,7 @@ document.getElementById("loc").onclick = function () {
 //     let size = doc
 // }
 function tt(a) {
-    var price = document.querySelector(".price__sp_" + a).innerHTML;
+    var price = document.querySelector(".price__sp_"+a).innerHTML;
     console.log(price);
 
     // var total = document.querySelector(".total").innerHTML;
@@ -368,11 +404,11 @@ function tt(a) {
     let cc = price;
     // console.log(cc);
 
-    var x = document.getElementById("HNumber_" + a).value;
-
+    var x = document.getElementById("HNumber_"+a).value;
+    
     console.log(x);
-    document.getElementById("totalsp_" + a).innerHTML = x * cc;
-}
+    document.getElementById("totalsp_"+a).innerHTML = x * cc;
+ }  
 //  tt(); 
 
 function HaFunction() {
@@ -384,12 +420,12 @@ function HmFunction() {
 }
 
 function HaFunction1(a) {
-    document.getElementById("HNumber_" + a).stepUp();
+    document.getElementById("HNumber_"+a).stepUp();
     // console.log("tru",a);
 }
 
 function HmFunction1(b) {
-    document.getElementById("HNumber_" + b).stepDown();
+    document.getElementById("HNumber_"+b).stepDown();
     // console.log("cong",b);
 }
 
@@ -404,7 +440,7 @@ function someFuncDown(b) {
     // console.log(b);
 }
 
-function demSoSpTrongGio() {
+function demSoSpTrongGio(){
     // dssp.mangSPAdd;
     // // console.log(dssp.mangSPAdd.length)
     // var sptg = 0;
@@ -422,7 +458,6 @@ Product();
 
 //! ri trừ điểm cấu trúc code ah nghe
 getLocalStorage()
-// đăng xuất
 
 // !hiển thị cái số trên nút click giỏ hàng
 demSoSpTrongGio()
