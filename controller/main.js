@@ -265,14 +265,14 @@ function addGioHang(id) {
         //     });
         // console.log(dssp.mangSPAll[id]);
         // this.mangSPAll=[...ds] => chuyền id sẽ chuyền hết 
-        dssp.themSP(dssp.mangSPAll[id]);
-        setLocalStorage();
+        // dssp.themSP(dssp.mangSPAll[id]);
+        // setLocalStorage();
 
-        getLocalStorage();
+        // getLocalStorage();
 
-        //TODO: Hiển thị danh sách
+        // //TODO: Hiển thị danh sách
 
-        hienThiSanPhamTrongGioHang(dssp.mangSPAdd);
+        // hienThiSanPhamTrongGioHang(dssp.mangSPAdd);
         demSoSpTrongGio();
     } else {
         alert("Vui lòng đăng nhập trước")
