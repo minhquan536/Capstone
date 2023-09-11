@@ -1,4 +1,5 @@
 var validation = new Validation();
+// set local
 function setlocal(message, content) {
     localStorage.setItem(message, JSON.stringify(content))
 }

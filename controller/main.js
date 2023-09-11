@@ -219,6 +219,106 @@ function addGioHang(id) {
     
     hienThiSanPhamTrongGioHang(dssp.mangSPAdd);
     demSoSpTrongGio();
+    var userlog = document.getElementById("user").textContent;
+    console.log(id);
+    if (userlog != "") {
+        console.log(userlog + "123")
+        console.log(dssp.mangSPAll[id]);
+        // this.mangSPAll=[...ds] => chuyền id sẽ chuyền hết 
+        dssp.themSP(dssp.mangSPAll[id]);
+        setLocalStorage();
+        getLocalStorage();
+        //TODO: Hiển thị danh sách
+        hienThiSanPhamTrongGioHang(dssp.mangSPAdd)
+
+        //     var promiseObj = axios({
+        //         method: 'get',
+        //         url: 'https://shop.cyberlearn.vn/api/Product',
+        //     });//pending
+        // console.log(id);
+        //     var promiseObj = axios({
+        //         method: 'get',
+        //         url: 'https://shop.cyberlearn.vn/api/Product',
+        //     });//pending
+
+        //     // then, catch : thành công, thất bại
+        //     // result , response
+        //     promiseObj.then(function (result) {
+        //         // thành công
+        //         // console.log(result);// mỗi BE trả về kết quả khác nhau
+        //         // axios tự chuyển kiểu dữ liệu Json sang mảng(Array)
+        //         var cc = result.data
+        //         var ccc =cc.content
+        //         var cccc = ccc[id];
+
+        //         let ids = cccc.id;
+        //         let name = cccc.name; 
+        //         let alias = cccc.alias;
+        //         let price = cccc.price;
+        //         let description = cccc.description;
+        //         let size = cccc.size;
+        //         let shortDescription = cccc.shortDescription;
+        //         let quantity = cccc.quantity;
+        //         let image = cccc.image;
+        //         console.log(name);
+        //         console.log(alias);
+        //         console.log(price);
+
+
+        //         // console.log(cccc.name);
+        //         var sp = new SanPham(id,name,alias,price,1,size,shortDescription,quantity,image);
+        //         dssp.themSP(sp);
+        //         // console.log(dssp.mangSPAdd);
+        //         setLocalStorage();
+        //         getLocalStorage();
+        //         //TODO: Hiển thị danh sách
+        //         hienThiGioHang(dssp.mangSPAdd);
+        //         // tìm kiếm sp trong mangAll
+        // // kiêm tra ton tại ở mangAdd
+        // //=> chưa tồn tại thì thêm sp vao mangAdd
+        // //=> đã tồn tại rồi, tăng số lượng thêm 1
+        // //=> show ds gio hang
+        //     });
+        //     promiseObj.catch(function (error) {
+        //         // thất bại
+        //         console.log(error);
+        //         // alert("hệ thống đang bảo trì")
+        //     });
+
+        //         // console.log(cccc.name);
+        //         var sp = new SanPham(id,name,alias,price,1,size,shortDescription,quantity,image);
+        //         dssp.themSP(sp);
+        //         // console.log(dssp.mangSPAdd);
+        //         setLocalStorage();
+        //         getLocalStorage();
+        //         //TODO: Hiển thị danh sách
+        //         hienThiGioHang(dssp.mangSPAdd);
+        //         // tìm kiếm sp trong mangAll
+        // // kiêm tra ton tại ở mangAdd
+        // //=> chưa tồn tại thì thêm sp vao mangAdd
+        // //=> đã tồn tại rồi, tăng số lượng thêm 1
+        // //=> show ds gio hang
+        //     });
+        //     promiseObj.catch(function (error) {
+        //         // thất bại
+        //         console.log(error);
+        //         // alert("hệ thống đang bảo trì")
+        //     });
+        // console.log(dssp.mangSPAll[id]);
+        // this.mangSPAll=[...ds] => chuyền id sẽ chuyền hết 
+        // dssp.themSP(dssp.mangSPAll[id]);
+        // setLocalStorage();
+
+        // getLocalStorage();
+
+        // //TODO: Hiển thị danh sách
+
+        // hienThiSanPhamTrongGioHang(dssp.mangSPAdd);
+        demSoSpTrongGio();
+    } else {
+        alert("Vui lòng đăng nhập trước")
+
+    }
 }
 
 function getLocalStorage() {
