@@ -60,6 +60,27 @@ header .navbar-collapse a:hover {
   font-weight: 400;
 }
 
+.info-log {
+  align-items: center;
+}
+
+.name__user {
+  margin: 0;
+  font-size: 20px;
+  color: black;
+}
+
+.icon__user {
+  font-size: 20px;
+  color: black;
+}
+
+.dropdown__user {
+  background-color: transparent;
+  border: none;
+  margin: 0;
+}
+
 .carousel {
   padding-top: 50px;
 }
@@ -425,7 +446,7 @@ input[type=radio]:checked ~ label {
   border: 1px solid white;
 }
 
-.btn {
+.btnLog {
   display: flex;
   justify-content: space-between;
 }
@@ -445,7 +466,7 @@ input[type=radio]:checked ~ label {
   color: rgb(3, 3, 75);
 }
 
-.btn {
+.btnLog {
   margin: 30px 0;
 }
 

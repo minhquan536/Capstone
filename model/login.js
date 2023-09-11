@@ -1,4 +1,7 @@
 var validation = new Validation();
+function setlocal(message, content) {
+    localStorage.setItem(message, JSON.stringify(content))
+}
 function loginIn() {
     var email = document.getElementById("emailLogin").value;
     var password = document.getElementById("matKhauLogin").value;
@@ -14,9 +17,11 @@ function loginIn() {
         });
         promiseObj.then(function (result) {
             console.log(result);
-            alert(result.data.message)
-            if (result) { window.location.href = "../index.html" }
-
+            alert(result.data.message);
+            if (result) {
+                window.location.href = "../index.html",
+                    setlocal("user", result)
+            }
         }).catch(function (error) {
             console.log(error);
             alert(error.response.data.message)

@@ -3,10 +3,27 @@ var dssp = new DanhSachSanPham();
 function setLocalStorage() {
     localStorage.setItem("DSSP", JSON.stringify(dssp.mangSPAdd));
 }
+function remove() {
+    localStorage.removeItem("user");
+    getLocalStorage();
+    window.location.reload()
+}
+document.getElementById("logout").onclick = remove
+
+// ẩn đi nút đăng nhập, đăng ký nếu đã đăng nhập và ngược lại
+function changeLog() {
+    var isLogIn = localStorage.getItem("user");
+    if (isLogIn) {
+        document.getElementById("loginButton").style.display = "none";
+        document.getElementById("signButton").style.display = "none";
+    } else {
+        document.getElementById("btnLog").style.display = "none";
+    }
+}
+changeLog();
 
 function hienThiSanPhamTrongGioHang(mang) {
     var content = "";
-
     mang.map(function (sp) {
         content += `
         <tr class="">
@@ -20,7 +37,6 @@ function hienThiSanPhamTrongGioHang(mang) {
             <th><button style="background-color: red; padding: 0 10px;border: none;" onclick="xoaSP(${sp.id})">X</button></th>
         </tr>
         `;
-
     })
     document.querySelector("#tbodySanPham").innerHTML = content;
 }
@@ -126,7 +142,20 @@ function hienThiDS(mang) {
 
 
 function addGioHang(id) {
+    var userlog = document.getElementById("user").textContent;
     console.log(id);
+    if (userlog != "") {
+        console.log(userlog + "123")
+        console.log(dssp.mangSPAll[id]);
+        // this.mangSPAll=[...ds] => chuyền id sẽ chuyền hết 
+        dssp.themSP(dssp.mangSPAll[id]);
+        setLocalStorage();
+        getLocalStorage();
+        //TODO: Hiển thị danh sách
+        hienThiSanPhamTrongGioHang(dssp.mangSPAdd)
+    } else {
+        alert("Vui lòng đăng nhập trước")
+    }
     //     var promiseObj = axios({
     //         method: 'get',
     //         url: 'https://shop.cyberlearn.vn/api/Product',
@@ -175,16 +204,6 @@ function addGioHang(id) {
     //         console.log(error);
     //         // alert("hệ thống đang bảo trì")
     //     });
-    console.log(dssp.mangSPAll[id]);
-    // this.mangSPAll=[...ds] => chuyền id sẽ chuyền hết 
-    dssp.themSP(dssp.mangSPAll[id]);
-    setLocalStorage();
-
-    getLocalStorage();
-
-    //TODO: Hiển thị danh sách
-
-    hienThiSanPhamTrongGioHang(dssp.mangSPAdd);
 
 }
 
@@ -196,9 +215,14 @@ function getLocalStorage() {
         // JSON.parse
         dssp.mangSPAdd = JSON.parse(localStorage.getItem("DSSP"));
         hienThiSanPhamTrongGioHang(dssp.mangSPAdd);
+
+    };
+    if (localStorage.getItem("user") != null) {
+        var user = JSON.parse(localStorage.getItem("user"));
+        document.getElementById("user").innerHTML = user.data.content.email;
     }
 }
-
+getLocalStorage();
 
 function xoaSP(id) {
     console.log(id);
@@ -245,3 +269,4 @@ Product();
 
 //! ri trừ điểm cấu trúc code ah nghe
 getLocalStorage()
+// đăng xuất

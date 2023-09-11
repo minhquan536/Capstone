@@ -37,16 +37,27 @@
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
+                <ul class="navbar-nav ml-auto info-log">
                     <li class="nav-item active">
                         <a class="nav-link" href="#">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./view/dangnhap.html">Login</a>
+                        <a id="loginButton" class="nav-link" href="./view/dangnhap.html">Login</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./view/dangki.html">Register</a>
+                        <a id="signButton" class="nav-link" href="./view/dangki.html">Register</a>
                     </li>
+                    <div id="btnLog" class="dropdown logedBTN">
+
+                        <button class="btn btn-secondary dropdown-toggle dropdown__user" type="button"
+                            data-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-user icon__user"></i>
+                            <p class="name__user" id="user"></p>
+                        </button>
+                        <div class="dropdown-menu">
+                            <button id="logout" type="submit" class="dropdown-item logout__text">Đăng xuất</button>
+                        </div>
+                    </div>
 
                 </ul>
             </div>
@@ -302,8 +313,6 @@
 
     <script src="./controller/SanPham.js"></script>
     <script src="./controller/DanhSachSanPham.js"></script>
-
-
     <script src="./controller/main.js"></script>
 
     <script>
